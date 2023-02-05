@@ -1,10 +1,9 @@
 import './App.css';
 import { useState,useEffect } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 import Create from './components/Create';
 import Dashboard from './components/Dashboard';

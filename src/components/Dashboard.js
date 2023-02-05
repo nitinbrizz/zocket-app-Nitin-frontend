@@ -6,6 +6,7 @@ import {IconButton} from "@mui/material";
 import {InputAdornment} from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import TableView from './TableView';
+import { Link } from 'react-router-dom';
 
 export default function Dashboard({record,deleteRecord}) {
   console.log(record);
@@ -31,7 +32,9 @@ export default function Dashboard({record,deleteRecord}) {
                   <Typography varinat="body1" sx={{color:"grey"}}>Check the list of campaigns you created</Typography>
                 </Box>
                 <Box sx={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-                  <Button href="/create" startIcon={<AddCircleOutlineIcon/>} variant="contained">Create new campaign</Button>
+                  <Link to="/create">
+                   <Button startIcon={<AddCircleOutlineIcon/>} variant="contained">Create new campaign</Button>
+                  </Link>
                 </Box>
         </Box>
         <Paper className="Main Section">

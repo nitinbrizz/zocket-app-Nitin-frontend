@@ -61,7 +61,9 @@ export default function Step1({campaignData,setCampaignData}) {
             <Grid sx={styling.container} container spacing={2}>
                 {cards.map((card)=>(
                     <Grid key={card.id} item xs={6} md={4}>
-                        <Button sx={styling.button} onClick={()=>{setCampaignData({...campaignData,name:card.heading1,platform:card.platform})}}>
+                        <Button sx={styling.button} onClick={()=>{
+                                setclicks([card.id])
+                                setCampaignData({...campaignData,name:card.heading1,platform:card.platform})}}>
                                 {clicks.includes(card.id) ? 
                                 <Box>
                                     <Icon sx={{position:"absolute",left:"95%",top:"-10px",color:"blue",backgroundColor:"white"}}>check_circle</Icon>

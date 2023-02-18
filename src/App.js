@@ -20,7 +20,7 @@ function App() {
   //*****************Getting Campaign Details from Datbase ******************/
   const loadEmployeeDetail = async () =>
   {
-    var response = fetch('http://localhost:5000/api/tasks')
+    var response = fetch('/api/tasks')
         .then(function(response){
           return response.json();
         })

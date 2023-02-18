@@ -49,7 +49,7 @@ export default function Create({products}) {
     if (page === FormTitles.length - 1) {
       try {
         console.log("trying...");
-        await axios.post("http://localhost:5000/api/tasks",campaignData).then(()=>{
+        await axios.post("https://zocket-app-nitin-api.onrender.com/api/tasks",campaignData).then(()=>{
           console.log("connected!!!!!");
           console.log(campaignData)
         })

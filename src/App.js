@@ -33,7 +33,7 @@ function App() {
   //*****************Getting Product Details from Datbase ******************/
   const loadProductDetail = async () =>
   {
-    var response = fetch('http://localhost:5000/api/pics')
+    var response = fetch('/api/pics')
         .then(function(response){
           return response.json();
         })
@@ -44,7 +44,7 @@ function App() {
   /**********************END ***************************************************/
   const deleteRecord = (productId) =>
     {
-      axios.delete(`http://localhost:5000/api/tasks/${productId}`)
+      axios.delete(`/api/tasks/${productId}`)
       .then((result)=>{
         loadEmployeeDetail();
       })

@@ -20,7 +20,7 @@ function App() {
   //*****************Getting Campaign Details from Datbase ******************/
   const loadEmployeeDetail = async () =>
   {
-    var response = fetch('/api/tasks')
+    var response = fetch('https://zocket-app-nitin-api.onrender.com/api/tasks')
         .then(function(response){
           return response.json();
         })
@@ -33,7 +33,7 @@ function App() {
   //*****************Getting Product Details from Datbase ******************/
   const loadProductDetail = async () =>
   {
-    var response = fetch('/api/pics')
+    var response = fetch('https://zocket-app-nitin-api.onrender.com/api/pics')
         .then(function(response){
           return response.json();
         })
@@ -44,7 +44,7 @@ function App() {
   /**********************END ***************************************************/
   const deleteRecord = (productId) =>
     {
-      axios.delete(`/api/tasks/${productId}`)
+      axios.delete(`https://zocket-app-nitin-api.onrender.com/api/tasks/${productId}`)
       .then((result)=>{
         loadEmployeeDetail();
       })
